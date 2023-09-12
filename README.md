@@ -4,7 +4,7 @@ This program is a web scraper that allows you to search and download images from
 
 ## Features
 
-- Web scraping: The program uses web scraping techniques to extract image data from Pexel.com.
+- Web scraping: The program uses web scraping techniques to extract image data from Pexels.com.
 - User input: The program prompts the user to enter a keyword for image search.
 - Image downloading: It downloads the images matching the keyword and saves them to the local machine.
 - Folder creation: The program creates a new folder based on the keyword entered by the user and saves the downloaded images into it.
