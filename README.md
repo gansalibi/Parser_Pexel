@@ -1,6 +1,6 @@
 # Pexels.com Parser
 
-This program is a web scraper that allows you to search and download images from Pexel.com. It prompts the user to enter a keyword for image search on the website and downloads the images, organizing them into folders based on the keyword.
+This program is a web scraper that allows you to search and download images from Pexels.com. It prompts the user to enter a keyword for image search on the website and downloads the images, organizing them into folders based on the keyword.
 
 ## Features
 
