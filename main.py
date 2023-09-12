@@ -22,7 +22,7 @@ def scrap_pexels(query=''):
     response = requests.get(url=query_str, headers=headers, proxies=proxies)
 
     if response.status_code != 200:
-        return f'Ошибка: Статус код - {response.status_code}, {response.json}'
+        return f'Error: Status Code - {response.status_code}, {response.json}'
 
     img_dir_path = '_'.join(i for i in query.split(' ') if i.isalnum())
     print(img_dir_path)
@@ -41,7 +41,7 @@ def scrap_pexels(query=''):
         img_urls = [item.get('src').get('original') for item in json_data.get('photos')]
         download_images(img_list=img_urls, img_dir_path=img_dir_path, proxies=proxies)
     else:
-        print(f'[INFO] Всего изображений: {images_count}. Сохранение может занять какое-то время.')
+        print(f'[INFO] Total Images: {images_count}. Saving may take a while.')
 
         images_list_urls = []
         for page in range(math.ceil(images_count/80)+1):
@@ -61,10 +61,10 @@ def download_images(img_list=[], img_dir_path='', proxies={}):
             with open(f'./{img_dir_path}/{item_url.split("-")[-1]}', 'wb') as file:
                 file.write(response.content)
         else:
-            print('Что-то пошло не так при скачивании изображения!')
+            print('Something went wrong when downloading the image!')
 
 def main():
-    query = input('Введите ключевую фразу для поиска: ')
+    query = input('Enter a keyword phrase to search for images: ')
     scrap_pexels(query=query)
 
 
